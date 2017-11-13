@@ -1,0 +1,16 @@
+Sub Header(Cancel As Boolean)
+            
+        Dim ws As Worksheet
+        Dim customername As String
+        
+        customername = InputBox("Please enter the client name:")
+
+        For Each ws In ActiveWorkbook.Worksheets
+
+            ws.PageSetup.RightHeader = customername _
+            & [Date]
+
+
+        Next ws
+
+End Sub
